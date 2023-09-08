@@ -85,7 +85,7 @@ class ProbabilitySimulator:
 			plt.show()
 
 	def save_animation(self, anim, title, fps=30):
-		writer = PillowWriter(fps=30)
+		writer = PillowWriter(fps=fps)
 		anim.save(f"./saved_animation/{title}.gif", writer=writer)
 
 
@@ -199,7 +199,7 @@ class BinomialDistribution(ProbabilitySimulator):
 
 	def get_theoretical_table(self):
 		q = 1 - self.p
-		return {i : math.comb(self.n, i)*(p**i)*(q**(self.n - i))*self.frames for i in range(self.n+1)}
+		return {i : math.comb(self.n, i)*(self.p**i)*(q**(self.n - i))*self.frames for i in range(self.n+1)}
 
 	def simulate(self):
 		fig, ax = super().create_and_format_fig_ax(title=f'Simulating Binomial distribution with {self.frames} successes', x_label='Count Of Success', y_label='Count')
@@ -213,8 +213,8 @@ class BinomialDistribution(ProbabilitySimulator):
 
 
 if __name__ == '__main__':
-	# X = BinomialDistribution(100, 0.5, 10_000)
-	# X.save_animation(X.play_changing_probability_animation(return_anim=True), 'changing_probability_geometric_distribution')
+	X = BinomialDistribution(100, 0.5, 10_000)
+	X.get_theoretical_probability()
 
-	X = GeometricDistribution(0.3, 1000)
-	X.simulate()
+	# X = GeometricDistribution(0.3, 1000)
+	# X.simulate()
