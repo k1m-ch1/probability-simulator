@@ -4,7 +4,7 @@ simulates binomial and geometric probability with animation
 # Get started
 - clone this repository and install the necessary dependecies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -67,7 +67,7 @@ Output:
 ![image](https://github.com/k1m-ch1/probability-simulator/assets/116435978/b8843239-d249-4b56-80a5-dadc528c1706)
 ### Binomial
 $$
-P(Y = k) = _nC_k\times p^k (1-p)^{n-k}
+P(Y = k) =\frac{n!}{(n-k)!k!}\times p^k (1-p)^{n-k}
 $$
 ```python
 Y.get_theoretical_probability()
