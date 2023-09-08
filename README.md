@@ -117,6 +117,7 @@ Output:
 
 ## Saving animation
 This animation is of the parent class so it applies to every child class
+**Note:** there must be a directory called 'saved_animation'
 ```python
 X.save_animation(X.play_adding_value_animation(return_anim=True), 'geometric_distribution_adding', fps=15)
 ```
