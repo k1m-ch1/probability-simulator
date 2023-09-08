@@ -101,7 +101,7 @@ Output:
 This will change the probability by 0.01 every frame.
 ### Geometric
 ```python
-X.play_adding_value_animation(return_anim=True)
+X.play_changing_probability_animation(return_anim=True)
 ```
 Output:
 
@@ -109,7 +109,7 @@ Output:
 
 ### Binomial
 ```python
-Y.play_adding_value_animation(return_anim=True)
+Y.play_changing_probability_animation(return_anim=True)
 ```
 Output:
 
